@@ -174,13 +174,11 @@ Proposée par Rob Kitchin dans _The Data Revolution_
 ---
 ### Une définition de la .red[quantification]
 
-.pull-left-narrow[
-
-![](https://shs-cairn-info.lama.univ-amu.fr/numero/DEC_HENNE_2021_01/cover/thumbnail?lang=fr)
-
+.left-column[
+<img src="https://www.interforum.fr/images/DEC/P3/9782348069253.jpg">
 ]
 
-.pull-right-wide[
+.right-column[
 
 > La **quantification**, c’est-à-dire l’action de quantifier, correspond au processus social de mise en nombres d’une réalité
 
