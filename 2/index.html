@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>La construction sociale des chiffres</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Samuel Goëta, Sciences Po Aix &amp; Datactivist" />
+    <meta name="date" content="2024-09-12" />
+    <script src="libs/header-attrs-2.25/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/datactivist.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/datactivist-fonts.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, orientation=auto"/>
+    <meta name="description" content="la grosse conférence"/>
+    <meta name="github-repo" content="datactivist/lagrosseconf"/>
+    <meta name="twitter:title" content="Mon joli titre de présentation"/>
+    <meta name="twitter:description" content="la grosse conférence"/>
+    <meta name="twitter:url" content="https://datactivist.coop/lagrosseconf"/>
+    <meta name="twitter:image" content="https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/logo.png"/>
+    <meta name="twitter:image:alt" content="le logo de Datactivist"/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:creator" content="@datactivi_st"/>
+    <meta name="twitter:site" content="@datactivi_st"/>
+    <meta property="og:title" content="Mon joli titre de présentation"/>
+    <meta property="og:description" content="la grosse conférence"/>
+    <meta property="og:url" content="https://datactivist.coop/lagrosseconf"/>
+    <meta property="og:image" content="https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/logo.png"/>
+    <meta property="og:image:alt" content="le logo de Datactivist"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="fr_FR"/>
+    <meta property="og:site_name" content="Datactivist"/>
+    <meta property="article:author" content="Datactivist"/>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# La construction sociale des chiffres
+## Strategic data - Collecter, traiter et visualiser des données
+### Samuel Goëta, Sciences Po Aix &amp; Datactivist
+### 2024-09-12
+
+---
+
+
+
+
+layout: true
+
+&lt;style&gt;
+.remark-slide-number {
+  position: inherit;
+}
+
+.remark-slide-number .progress-bar-container {
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  display: block;
+  left: 0;
+  right: 0;
+}
+
+.remark-slide-number .progress-bar {
+  height: 100%;
+  background-color: #e95459;
+}
+
+&lt;/style&gt;
+
+
+&lt;div class='my-footer'&gt;&lt;span&gt;la grosse conférence&lt;/span&gt; &lt;center&gt;&lt;div class=logo&gt;&lt;a href='https://datactivist.coop/'&gt;&lt;img src='https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/fond_noir_monochrome.png' width='100px'&gt;&lt;/a&gt;&lt;/div&gt;&lt;/center&gt;&lt;/span&gt;&lt;/div&gt; 
+
+
+---
+
+class: center, middle
+
+Ces slides en ligne : http://datactivist.coop/lagrosseconf
+
+Sources : https://github.com/datactivist/lagrosseconf
+
+
+Les productions de Datactivist sont librement réutilisables selon les termes de la licence [Creative Commons 4.0 BY-SA](https://creativecommons.org/licenses/by-sa/4.0/legalcode.fr).
+
+&lt;BR&gt;
+&lt;BR&gt;
+
+![](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png)
+
+
+---
+class:inverse, middle, center
+
+### C'est l'heure du .red[QCM] 😬
+
+### Rdv sur Equinox
+
+**Pour y accéder :** 
+&gt; Masters
+
+&gt; Enseignements de master par disciplines
+
+&gt; Science politique
+
+&gt; Collecter, traiter et interpreter des donnees strategiques (strategic data)
+
+**10 minutes, 8 questions**
+
+**Aucune tricherie ne sera tolérée.**
+---
+### Précision sur les modalités d'évaluation : le .red[position paper]
+
+.left-column[
+.red[Consignes et critères d'évaluation sur Equinox :]
+
+![](consignes.png)
+
+]
+
+.right-column[
+3 cas de figure possibles : 
+1. **Vous participez au BWS :** votre équipe réalise un position paper et les réalisations figurent en annexe. Il faudra aussi s'en servir dans le corps du position paper.
+2. **Vous soutenez une équipe du BWS sur le volet data :** vos productions pourront s'insérer dans un position paper existant.  
+3. **Vous créez une situation fictive :** vous choisissez une organisation (ONG, lobby, institution, syndicat, interprofession), un projet de loi ou directive réel en cours de débat, la position l’organisation à propos du projet de législation, les demandes de l’organisation. Vous pouvez (et c'est encouragé) vous appuyez sur des prises de position réelles d'organisation. Cela doit tenir en 2 pages maximum. 
+]
+
+---
+### La statistique comme outil de gouvernement et outil de preuve
+
+Alain Desrosières, dans _Gouverner par les nombres_, s'interroge sur le double sens de la statistique : 
+&gt; Comment comprendre qu’un même mot, statistique, évoque pour les uns la simple quantification (la transformation de mots en nombres), et pour d’autres l’idée de grands nombres et de régularités tendancielles appuyées sur le calcul des probabilités ?
+
+Ce polysémie de la statistique remonte à ses deux origines étymologiques : 
+&gt; Comment comprendre, en effet, qu’elle soit convoquée tantôt comme un « outil de gouvernement », depuis le xviiie siècle (Foucault, 2004), tantôt comme un « outil de preuve », depuis le xixe siècle, avec le développement de la statistique mathématique et son association de plus en plus étroite avec le calcul des probabilités (Stigler, 1986) ?
+
+.footnote[Alain Desrosières, _Pour une sociologie historique de la quantification_, Presses des Mines, 2008.]
+
+---
+
+### La statistique comme outil de gouvernement et outil de preuve
+
+.pull-left[
+.red[**Outil de gouvernement**]
+
+- Informer la population et les acteurs
+
+- Organiser l'allocation des ressources
+
+- Prendre des décisions
+
+- Fournir des points de repère
+
+]
+
+.pull-right[
+.red[**Outil de preuve**]
+
+- Etablir des arguments et des positions dans une controverse
+
+- Trancher des discussions
+
+- Légitimer une démonstration
+
+- Renforcer une décision par une présomption d'objectivité
+
+]
+
+Les deux dimensions de la statistique sont liées : la statistique sert d'outil scientifique en même temps d'outil politique.
+
+.footnote[Anaïs Henneguelle et Arthur Jatteau, _Sociologie de la quantification_,
+La Découverte, 2021.]
+
+---
+### .red[Débat : ] donner un exemple de statistique utilisé commme un outil de gouvernement et de preuve
+
+https://app.wooclap.com/STRATDATA2
+
+&lt;iframe allowfullscreen frameborder="0" height="70%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/events/SAXBFP/questions/66e2fe2af5395ab17c01c8f4" width="100%"&gt;&lt;/iframe&gt;
+
+
+---
+### Statistique et réalité : deux approches
+
+.pull-left[
+.red[**L'approche réaliste**]
+- Statistique : historiquement construite et légitimée à partir du modèle des sciences de la nature. 
+
+- Supposer qu'il préexiste une réalité antérieurement à sa mesure.
+
+- Chômage, pauvreté et bonheur sont des réalités et on peut les mesurer.
+
+- Il peut exister des biais dans la "mesure" mais cela signifie qu'il existerait une réalité qu'on pourrait mesurer (un "vrai" chiffre du chômage)
+
+]
+
+--
+.pull-right[
+.red[**L'approche constructiviste**]
+- Historiquement : provient des sciences sociales
+
+- Place centrale aux conventions qui ont nécessairement présidé la construction des chiffres
+
+- Conventions d'équivalence : s'accorder sur le fait qu'il est pertinent, dans un certain cadre (Pôle Emploi, Insee…), de comptabiliser comme "chomeur" des individus aux situations différentes. 
+
+- Garder la trace du codage pour ne tomber dans le piège de la réification des chiffres
+]
+
+---
+
+
+.left-column[
+### Quantifier, c'est convenir puis mesurer
+![](https://datactivist.coop/agglopolys/img/desrosi.jpeg)
+
+]
+
+.right-column[
+&gt; Le verbe quantifier est employé ici dans un sens large : **exprimer et faire exister sous une forme numérique ce qui, auparavant, était exprimé par des mots et non par des nombres.** […]
+
+&gt;  Le verbe quantifier, dans sa forme active (faire du nombre), suppose que soit **élaborée et explicitée une série de conventions d’équivalences préalables**, impliquant des comparaisons, des
+négociations, des compromis, des traductions, des inscriptions, des codages, des procédures
+codifiées et réplicables, et des calculs conduisant à la mise en nombre. 
+
+&gt; La mesure proprement dite vient ensuite, comme mise en œuvre réglée de ces conventions. De ce point de vue, **la quantification se décompose en deux moments : convenir et mesurer**. 
+]
+
+---
+### Vos exemples de conventions statistiques
+https://app.wooclap.com/STRATDATA2
+&lt;iframe allowfullscreen frameborder="0" height="70%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/events/SAXBFP/questions/66e308a44b846c9b45e93131" width="100%"&gt;&lt;/iframe&gt;
+
+---
+### Les définitions de l'INSEE 
+
+[![](definitions.png)](https://www.insee.fr/fr/metadonnees/definitions)
+
+---
+### Une convention n'est jamais figée
+
+&lt;iframe width="560" height="415" src="https://www.youtube.com/embed/k2CejlPnqsQ?si=gKkhgoQBe_NQ4ed0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;
+---
+### La réification des objets statistiques 
+
+&gt; Une fois les procédures de quantification codifiées et routinisées, leurs produits sont réifiés. Ils tendent à devenir « la réalité », par un effet de cliquet irréversible. Les conventions initiales sont oubliées, l’objet quantifié est comme naturalisé et l’emploi du verbe « mesurer » vient machinalement à l’esprit et sous la plume. 
+
+&gt; Cela reste vrai jusqu’à ce que, pour des raisons à analyser au cas par cas, ces « boîtes noires » sont réouvertes, à l’occasion de controverses.
+
+.footnote[Desrosières, Alain. Pour une sociologie historique de la quantification. Presses des Mines, 2008, https://doi-org.lama.univ-amu.fr/10.4000/books.pressesmines.901.
+]
+
+
+---
+### Des exemples de controverse autour des conventions ? 
+
+&lt;iframe allowfullscreen frameborder="0" height="70%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/events/SAXBFP/questions/66e30ae3b021b9b250df4ff1" width="100%"&gt;&lt;/iframe&gt;
+---
+### Inverser l'infrastructure pour ouvrir la boite noire de la statistique
+
+.left-column[
+
+![](sorting.jpg)
+Bowker &amp; Star, _Sorting Things Out: Classification and Its Consequences_, MIT Press, 2000.
+]
+.right-column[
+&gt; _This inversion is a struggle against the tendency of infrastructure to disappear (except when breaking down). It means learning to look closely at technologies and arrangements that, by design and by habit, tend to fade into the woodwork (sometimes literally!)._
+
+&gt; _Infrastructural inversion means recognizing the depths of interdependence of technical networks and standards, on the one hand, and the real work of politics and knowledge production on the others_
+]
+---
+class: inverse
+
+### .red[Exercice :] la data biographie
+
+.pull-left[
+Refaire la biographie d'un chiffre à partir d'un épisode de Datagueule :
+
+![](adelphite.jpg)
+]
+
+.pull-right[
+![](databiography.png)
+]
+---
+class: inverse, center, middle
+
+# Merci !
+
+Contact : [samuel.goeta@sciencespo-aix.fr](mailto:samuel.goeta@sciencespo-aix.fr)
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script src="matomo.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"slideNumberFormat": "<div class=\"progress-bar-container\">\n  <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">\n  </div>\n</div>\n"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
