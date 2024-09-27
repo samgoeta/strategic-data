@@ -19,10 +19,10 @@ output:
         </div>
     anchor_sections: false
 params:
-  event: la grosse conférence
+  event: Cours strategic data, la construction sociale des chiffres
   slug: lagrosseconf
-  description: Découvrez ma grosse conférence !
-  title: Mon joli titre de présentation
+  description: Cours sur la construction sociale des chiffres
+  title: La construction sociale des chiffres
   image: https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/logo.png
   image_alt: le logo de Datactivist
 ---
@@ -134,7 +134,7 @@ Alain Desrosières, dans _Gouverner par les nombres_, s'interroge sur le double 
 > Comment comprendre qu’un même mot, statistique, évoque pour les uns la simple quantification (la transformation de mots en nombres), et pour d’autres l’idée de grands nombres et de régularités tendancielles appuyées sur le calcul des probabilités ?
 
 Ce polysémie de la statistique remonte à ses deux origines étymologiques : 
-> Comment comprendre, en effet, qu’elle soit convoquée tantôt comme un « outil de gouvernement », depuis le xviiie siècle (Foucault, 2004), tantôt comme un « outil de preuve », depuis le xixe siècle, avec le développement de la statistique mathématique et son association de plus en plus étroite avec le calcul des probabilités (Stigler, 1986) ?
+> Comment comprendre, en effet, qu’elle soit convoquée tantôt comme un « outil de gouvernement », depuis le xviiie siècle tantôt comme un « outil de preuve », depuis le xixe siècle, avec le développement de la statistique mathématique et son association de plus en plus étroite avec le calcul des probabilités ?
 
 .footnote[Alain Desrosières, _Pour une sociologie historique de la quantification_, Presses des Mines, 2008.]
 
@@ -186,7 +186,7 @@ https://app.wooclap.com/STRATDATA2
 
 .pull-left[
 .red[**L'approche réaliste**]
-- Statistique : historiquement construite et légitimée à partir du modèle des sciences de la nature. 
+- Statistique : historiquement construite et légitimée à partir des sciences de la nature. 
 
 - Supposer qu'il préexiste une réalité antérieurement à sa mesure.
 
