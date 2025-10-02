@@ -20,7 +20,7 @@ output:
     anchor_sections: false
 params:
   event: cours strategic data
-  slug: strategic data
+  slug: strategic-data
   description: Sociohistoire de la quantification
   title: Mon joli titre de présentation
   image: https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/logo.png
@@ -35,7 +35,7 @@ meta() %>%
   meta_viewport() %>% 
   meta_social(
     title = params$title,
-    url = paste0("https://datactivist.coop/", params$slug),
+    url = paste0("https://samgoeta.github.io/", params$slug),
     image = params$image,
     image_alt = params$image_alt,
     og_type = "website",
@@ -91,13 +91,100 @@ Les productions de Datactivist sont librement réutilisables selon les termes de
 ![](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png)
 
 ---
-### Qu'attendez-vous de ce cours ?
+### Peut-on se priver de chiffre en politique ? 
 
-<iframe allowfullscreen frameborder="0" height="75%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/events/OTKCCA/questions/66d9853361da7535040ce6d0" width="100%"></iframe>
+.pull-left[
+
+![](img/couv_rey.jpg)
+
+]
+
+.pull-right[
+> Au commencement était le verbe, il semble à la fin que tout devient nombre.
+
+> Personne ne saurait parler sérieusement de l'état de la société et discuter politique sans se référer aux informations quantitatives.
+]
+
+---
+### Les données s'imposent à nous comme des .red[arguments d'autorité]
+
+#### On peut débattre de tout… sauf des chiffres ?
+
+.center[
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uUZDWW7V36A?si=J8BdYcNJcpbAs8h8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+]
+
+---
+### On aurait néanmoins tort de vouloir se passer des chiffres
+
+.pull-left[
+
+![](img/desrosieres.png)
+
+
+]
+.pull-right[
+Pour Alain Desrosières, dans _La Politique des grands nombres_ (p.27), la statistique vise à : 
+> "**faire tenir les choses**, de façon à ce qu'elles constituent des représentations partagées, sur lesquelles des actions dotées de sens commun puissent porter.
+]
+
+Les chiffres permettent de "**dire et faire société**" grâce à leur réputation de **factualité et d'objectivité**". 
+
+Ils fournissent des "**points d'appui**" à la réflexion et au débat. 
+---
+### Le monde post-statistique ?
+
+.pull-left[
+William Davies (2017), "[_Comment la statistique a perdu son pouvoir – et pourquoi nous devrions craindre ce qui va suivre ?_](https://www.persee.fr/doc/staso_2269-0271_2017_num_5_1_1018)" : 
+
+- L'aversion pour la statistique : un des traits du populisme, au coeur de la post-vérité 
+
+- L'histoire tri-séculaire de la statistique : dépeindre une société de manière globale et objective
+
+- Big data : pluralité de sources de données, risque de privatisation du chiffre
+
+]
+
+.pull-right[
+![](img/davies.png)
+]
+
+---
+### Les dangers du monde post-statistique 
+
+.pull-left[
+![](img/wired-epa.png)
+L'agence de protection de l'environnement américaine (EPA) met fin aux obligations de reporting des émissions de gaz à effet de serre. 
+
+]
+
+.pull-right[
+- Sans ces données, il devient impossible de suivre si les industries maintiennent leur effort de décarbonisation. Le gouvernement ne peut plus mettre en œuvre une politique climatique.
+
+- Les données des acteurs non-gouvernementaux (détection par IA) ne sont pas accessibles à tous et ne peuvent pas être utilisées devant les tribunaux.
+
+]
+
 
 
 ---
+### Un cours sur une ligne de crête
 
+.pull-left[
+
+
+.reduite[![](https://www.interforum.fr/images/DEC/P3/9782355220548.jpg)]
+]
+
+.pull-right[
+**Développer une culture critique de la quantification, ses sources et ses limites**
+
+**Apprendre à mobiliser la force rhétorique des chiffres et de la dataviz pour le plaidoyer**
+
+> "Le parti-pris de ce livre procède du judo : prolonger le mouvement de l'adversaire afin de détourner sa force et la lui renvoyer en pleine face, faire de la statistique une arme critique."
+
+]
+---
 ### .red[Objectifs] du cours
 
 * Comprendre le rôle de la quantification dans la construction de l'expertise 
@@ -113,15 +200,15 @@ Les productions de Datactivist sont librement réutilisables selon les termes de
 ---
 ### Contenu des séances
 
-1. **05/09 :** Sociohistoire de la statistique (**vous êtes ici !**)
+1. **03/10 :** Sociohistoire de la statistique (.red[**vous êtes ici !**])
 
-2. **12/09 :** La construction sociale des chiffres
+2. **07/10 :** La construction sociale des chiffres
 
-3. **19/09** : Les acteurs de la statistique et de la quantification
+3. **14/10** : Les acteurs de la statistique et de la quantification
 
-4. **26/09 :** Collecter et évaluer les chiffres
+4. **14/11 :** Collecter et évaluer les chiffres
 
-5. **24/10 :**Visualiser les données
+5. **11/11 :**Visualiser les données
 
 
 ---
@@ -221,24 +308,7 @@ La Découverte, 2021.]
  
 <iframe allowfullscreen frameborder="0" height="70%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/events/STRATDATA/questions/66d9a9a71e81bbf1152f5e07" width="100%"></iframe>
 
----
-### Des chiffres pour faire tenir les choses 
 
-.pull-left[
-
-![](img/desrosieres.png)
-
-
-]
-.pull-right[
-Pour Alain Desrosières, dans _La Politique des grands nombres_ (p.27), la statistique vise à : 
-> "**faire tenir les choses**, de façon à ce qu'elles constituent des représentations partagées, sur lesquelles des actions dotées de sens commun puissent porter.
-]
-
-Les chiffres permettent de "**dire et faire société**" grâce à leur réputation de **factualité et d'objectivité**". 
-
-Ils fournissent des "**points d'appui**" à la réflexion et au débat. 
----
 
 ### La quantification construit et transforme le monde social 
 
