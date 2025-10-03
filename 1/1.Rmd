@@ -308,7 +308,7 @@ La Découverte, 2021.]
  
 <iframe allowfullscreen frameborder="0" height="70%" mozallowfullscreen style="min-width: 500px; min-height: 355px" src="https://app.wooclap.com/events/STRATDATA/questions/66d9a9a71e81bbf1152f5e07" width="100%"></iframe>
 
-
+---
 
 ### La quantification construit et transforme le monde social 
 
