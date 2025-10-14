@@ -1,5 +1,5 @@
 ---
-title: "Les acteurs de la quantification"
+title: "Les acteurs de la statistique et de l'expertise publiques"
 subtitle: "Strategic data - Collecter, traiter et visualiser des données"
 author: "Samuel Goëta, Sciences Po Aix & Datactivist"
 date: "`r Sys.Date()`"
@@ -90,10 +90,6 @@ Les productions de Datactivist sont librement réutilisables selon les termes de
 
 ![](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png)
 
----
-class:inverse,middle,center
-
-# Retour sur les [data biographies](https://docs.google.com/presentation/d/1ZKirAT6zelcBeDhYs2fa83S5y_03-yZvsDaXSEWOYxU/edit?pli=1#slide=id.g2ffa2576c2b_21_0)
 
 ---
 ### Les acteurs de la quantification : à quoi pensez-vous ?
@@ -125,6 +121,38 @@ En cercle concentriques :
 ### Rappel : les 5 configurations de Desrosières
 
 ![](1/img/5formes.png)
+
+---
+### L'INSEE, un acteur central en prise avec les façons de penser et d'agir sur la société et l'économie
+
+**Exercice en binôme (20 minutes) :**
+* lisez la page sur l'histoire de l'INSEE "un peu d'histoire" : https://www.insee.fr/fr/information/1300622
+* Complétez le tableau suivant : 
+
+
+| PÉRIODE | CONTEXTE POLITIQUE | INNOVATIONS MÉTHODOLOGIQUES | TYPES DE DONNÉES |
+|---------|-------------------|----------------------------|------------------|
+| **1800-1941** | |  |
+| **1946-1960** |  |  |
+| **1961-1974** |  |  |
+| **1974-1992** |  |  |
+| **1992-2003** |  |  |
+| **2003-aujourd'hui** |  |  |
+
+
+---
+| Période | Contexte | Innovations | Données |
+|---------|-------------------|----------------------------|------------------|
+| **1800-1941** | État en construction, besoin de connaître le territoire et la population | Recensements manuels puis mécanographie (Carmille) | Recensement population, statistiques locales, fichiers administratifs |
+| **1946-1960** | Reconstruction, planification, État interventionniste | Enquêtes par sondage (USA), sources fiscales | Budgets familles, logement, santé, salaires |
+| **1961-1974** | Trente Glorieuses, État planificateur keynésien | Comptabilité nationale, nomenclatures (NAP, PCS), EAE | PIB, comptes nationaux, budgets économiques prévisionnels |
+| **1974-1992** | Crise économique, informatisation, décentralisation | SUSE, SIRENE, exploitation systématique sources admin | Répertoires entreprises, statistiques régionales, conjoncture |
+
+---
+| Période | Contexte | Innovations | Données |
+|---------|-------------------|----------------------------|------------------|
+| **1992-2003** | Construction européenne, mondialisation | Harmonisation européenne, Internet, panels | Statistiques comparables UE, données gratuites en ligne |
+| **2003-aujourd'hui** | Évaluation des politiques publiques, New Public Management | Recensement continu, big data, géocodage fin | Indicateurs de performance, statistiques locales fréquentes |
 
 ---
 ### Avant la création de l'INSEE (1/3)
@@ -197,7 +225,37 @@ class:inverse
 <iframe width="800" height="600" src="https://www.youtube.com/embed/NDgSIaHESJk?si=LuyHVjRN0KoKBWt_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
-[![](3/ssm.png)](https://www.insee.fr/fr/information/2013075)
+### La "grande famille" du SSP (Service Statistique Public)
+
+.reduite[![](https://blog.insee.fr/wp-content/uploads/2025/09/blogInsee_2025_08_l_insee_et_les_services_statistiques_ministeriels_fig1-1-scaled.png)]
+
+.footnote[Source : [L’Insee et les services statistiques ministériels : un visuel commun, des valeurs communes](https://blog.insee.fr/l-insee-et-les-services-statistiques-ministeriels/)]
+
+---
+### Le SSP : une répartition thématique
+
+.reduite[![](https://blog.insee.fr/wp-content/uploads/2025/08/blogInsee_2025_08_l_insee_et_les_services_statistiques_ministeriels_fig2-2048x1716.png)]
+
+.footnote[Source : [L’Insee et les services statistiques ministériels : un visuel commun, des valeurs communes](https://blog.insee.fr/l-insee-et-les-services-statistiques-ministeriels/)]
+
+---
+### Des valeurs communes aux services statistiques 
+
+.pull-left[
+![](https://blog.insee.fr/wp-content/uploads/2025/08/blogInsee_2025_08_l_insee_et_les_services_statistiques_ministeriels_fig3.png)
+]
+
+.pull-right[
+- **Transparence** : publier à tous gratuitement les productions statistiques avec le plus de détail possible
+
+- **Impartialité et indépendance** : ne pas être soumis au bon vouloir des gouvernants, ne pas favoriser d'acteurs
+
+- **Collaboration** : collaborer avec la société civile et les parties prenantes dans la conception et la diffusion des productions
+
+- **Confidentialité** : protéger le secret statistique 
+
+- **Pertinence** : répondre aux besoins des décideurs et de la société civile
+]
 ---
 .pull-left[
 ### Le Cnis et l'Asp : garants de l'indépendance et de la fiabilité de la statistique]
@@ -206,7 +264,22 @@ class:inverse
 
 ![](https://www.insee.fr/fr/statistiques/graphique/5008696/figure1.png)
 ]
+---
+### Du SSP à la statistique publique 
 
+.pull-left[
+![](https://blog.insee.fr/wp-content/uploads/2025/08/blogInsee_2025_08_l_insee_et_les_services_statistiques_ministeriels_fig4.png)
+]
+
+.pull-right[
+- **Le SSP n’a pas le monopole de la production de statistiques publiques.** 
+
+- Certaines séries statistiques produites par ces organismes sont dans ce cas labellisées par l’Autorité de la statistique publique (ASP)
+
+- Exemple : statistiques de la Cnaf sur les prestations sociales légales versées par les caisses d’allocations familiales (CAF), reconnues d’intérêt général et de qualité statistique.
+
+
+]
 ---
 class:inverse, middle,center
 
