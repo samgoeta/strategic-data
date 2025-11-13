@@ -4,7 +4,7 @@
     <title>La qualité et la fiabilité des chiffres</title>
     <meta charset="utf-8" />
     <meta name="author" content="Samuel Goëta, Sciences Po Aix &amp; Datactivist" />
-    <meta name="date" content="2024-10-24" />
+    <meta name="date" content="2025-11-14" />
     <script src="libs/header-attrs-2.28/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/datactivist.css" rel="stylesheet" />
@@ -37,7 +37,7 @@ class: center, middle, inverse, title-slide
 # La qualité et la fiabilité des chiffres
 ## Strategic data - Collecter, traiter et visualiser des données
 ### Samuel Goëta, Sciences Po Aix &amp; Datactivist
-### 2024-10-24
+### 2025-11-14
 
 ---
 
@@ -252,8 +252,181 @@ class:inverse, middle, center
 
 ---
 class:inverse, middle,center
+
+### Petit exercice de data visualisation
+
+---
+### Rappel : une vidéo à regarder sur la data visualisation
+
+.pull-left[
+[🎦La vidéo](https://visio.octoconf.com/playback/presentation/2.3/31be716d2a9116d4c411261e6c42312b04f65591-1731410369326)
+
+[📖 La présentation](https://open.datactivist.coop/docs/formation-dataviz)
+]
+
+.pull-right[
+![](img/ceinturenoire.png)
+]
+
+---
+### L'essentiel pour une bonne dataviz
+
+.reduite.center[![](img/dataviz-essentiel.png)]
+---
+### Les bons réflexes 
+
+1. Réfléchissez d’abord à votre **intention**, que cherchez-vous à montrer ?
+
+2. Choisissez un **format** adapté au message que vous voulez faire passer
+
+3. Donnez des **clés de lecture**
+- un titre qui annonce le contenu
+- un sous-titre qui explique les données
+- des clés de lecture pour mettre en avant les éléments importants
+
+Et gare au loup ! **Faites relire votre dataviz par un œil extérieur**
+
 ---
 
+### Petit exercice : améliorons ensemble les graphiques du rapport du Sénat sur les aides aux entreprises
+
+[![](img/senat.png)](https://www.senat.fr/rap/r24-808-1/r24-808-1_mono.html#toc109)
+
+---
+### Exemple avec ce graphique sur la part du PIB dédié à la R&amp;D
+
+.pull-left[
+#### Source des dépenses intérieures brutes en R&amp;D en 2024 (en % de PIB)
+
+![](img/graph-senat.png)
+]
+
+.pull-right[
+Ce graphique vient du rapport Draghi qui pointe **un net ralentissement depuis 10 ans de l'innovation dans l'UE**, notamment sur les TIC. 
+
+Le rapport alerte d'une crise de croissance des entreprises européennes, en particulier les startups, par **manque de financement pour atteindre la viabilité**. 
+
+Il considère que les **dépenses en R&amp;D sont trop faibles** et pas assez ciblées sur les priorités de l'UE : 2,3% du PIB dans l'UE, 3,5% aux US
+
+]
+---
+### Revoyons ce graphique : voyez-vous le message ?
+
+#### Source des dépenses intérieures brutes en R&amp;D en 2024 (en % de PIB)
+
+.reduite.center[![](img/graph-senat.png)]
+--
+#### Non ? On va le reprendre…
+---
+### Etape 1 : saisir les données
+
+**Le format long** (ou wide format) structure les données en tableau croisé : une dimension (la région) définit les lignes, tandis que l'autre (le secteur) définit les colonnes. Ce format est plus lisible mais il complique les traitements dans des outils avancés.
+
+| Région | Public | Privé | Enseignement supérieur et privé non-lucratif | Reste du monde |
+|--------|--------|-------|----------------------------------------------|----------------|
+| Union européenne | 0.7 | 1.3 | 0.1 | 0.2 |
+| États-Unis | 0.7 | 2.4 | 0.2 | 0.2 |
+| Chine | 0.5 | 1.9 | 0.0 | 0.0 |
+
+**Dans Datawrapper, nous aurons besoin d'un format long.**
+---
+### Etape 1 : saisir les données
+
+Le **format court** organise les données avec une ligne par observation : chaque combinaison de dimensions (ici région × secteur) occupe une ligne distincte. C'est le format privilégié pour l'analyse statistique et la visualisation, car il facilite les opérations de groupement, filtrage et agrégation. 
+
+| Région | Secteur | Valeur (% PIB) |
+|--------|---------|----------------|
+| Union européenne | Public | 0.7 |
+| Union européenne | Privé | 1.3 |
+| Union européenne | Enseignement supérieur et privé non-lucratif | 0.1 |
+| Union européenne | Reste du monde | 0.2 |
+| États-Unis | Public | 0.7 |
+| États-Unis | Privé | 2.4 |
+| États-Unis | Enseignement supérieur et privé non-lucratif | 0.2 |
+| États-Unis | Reste du monde | 0.2 |
+| Chine | Public | 0.5 |
+| Chine | Privé | 1.9 |
+| Chine | Enseignement supérieur et privé non-lucratif | 0.0 |
+| Chine | Reste du monde | 0.0 |
+
+
+---
+### Etape 2 : choisir la fonction de la dataviz
+
+.pull-left[
+![](https://datawrapper.de/cdn-cgi/image/quality=85,width=1920,f=auto,fit=cover/https://kirby.datawrapper.de/media/pages/blog/chart-types-guide/d039a8e380-1750069239/datawrapper-visualization-types-poster.png)
+]
+
+.pull-right[
+
+**1. Quel message voulez-vous faire passer ?**
+Selon le rapport Draghi, les pays de l'UE n'investissent pas suffisamment dans la R&amp;D, principalement par manque de financement privé.
+
+**2. Qu'essayez vous de montrer ?**
+- Une évolution dans le temps ?
+**- Des valeurs absolues ?**
+- Une ou des parties d'un ensemble ?
+- Une carte ?
+- Des flux ? 
+- Des  corrélations ?
+
+]
+
+---
+
+### Etape 3 : choisir un format de dataviz
+
+.pull-left[
+![](img/absolutevalues.png)
+]
+
+.pull-right[
+Les questions à vous poser : 
+- **Combien de catégories à comparer ?** Si vous comparez 2-3 pays, un simple bar chart suffit.
+- **Faut-il comparer des sous-catégories ?** Nos données ont deux dimensions (région × secteur). Un grouped bar chart permet de comparer facilement les secteurs entre régions.
+- **Quel niveau de précision attendu ?** Les proportional area charts (cercles proportionnels) et pictogram charts (icônes) sont plus visuels mais moins précis, à réserver si vous voulez montrer des ordres de grandeur.
+]
+---
+### Etape 4 : composez votre dataviz
+
+&lt;iframe title="Les États-Unis consacrent 3,5% de leur PIB à la R&amp;amp;amp;D contre 2,3% pour l'Union Européenne, portés par le secteur privé" aria-label="Barres séparées" id="datawrapper-chart-gQROY" src="https://datawrapper.dwcdn.net/gQROY/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="255" data-external="1"&gt;&lt;/iframe&gt;&lt;script type="text/javascript"&gt;window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});&lt;/script&gt;
+
+- Un titre qui donne le message de la dataviz
+- Un sous-titre pour comprendre les données
+- Un format simple à comprendre et adapté au message
+
+---
+### Etape 5 : testez d'autres formats
+
+&lt;iframe title="Les États-Unis consacrent 3,5% de leur PIB à la R&amp;amp;amp;D contre 2,3% pour l'Union Européenne, portés par le secteur privé" aria-label="Barres à puces" id="datawrapper-chart-U95yv" src="https://datawrapper.dwcdn.net/U95yv/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="285" data-external="1"&gt;&lt;/iframe&gt;&lt;script type="text/javascript"&gt;window.addEventListener("message",function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}});&lt;/script&gt;
+
+Ici, on cherche à se concentrer sur les éléments du titre : la part du PIB dédié à la R&amp;D, la part du secteur privé dans la R&amp;D. 
+
+---
+class:inverse, center, middle
+
+.left-column[
+### À vous
+![](img/avous.gif) 
+
+]
+
+.right-column[
+
+1. Choisissez un graphique (pas trop compliqué) parmi ceux du [rapport du Sénat sur les aides aux entreprises](https://www.senat.fr/rap/r24-808-1/r24-808-1_mono.html) 
+
+2. Saisissez les données dans un tableur et entrez ces données dans Canva (pour une visualisation simple) ou Datawrapper
+
+3. Identifiez le message à faire passer dans la dataviz et choisissez une fonction à l'aide de [l'article de Datawrapper "A friendly guide to choosing a chart type"](https://www.datawrapper.de/blog/chart-types-guide#showing-absolute-numbers)
+
+4. Choisissez un format adapté et ajustez la dataviz
+
+5. Ecrivez un titre qui annonce le contenu et un sous-titre qui présente les données
+
+6. [Remplissez ce formulaire pour finir](https://samgoeta.notion.site/2a4f8843ac558092b768d48a4f1dccce?v=2aaf8843ac5580b78489000c69bdbe86&amp;pvs=74).
+]
+
+---
 class: inverse, center, middle
 
 # Merci !
